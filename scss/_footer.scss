@@ -1,0 +1,30 @@
+.footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    ul li{
+        list-style-type: none;
+    }
+    a{
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
+    .titulosfooter{
+        font-weight: lighter;
+        color: white;
+        text-decoration: none;
+        text-decoration-color: rgb(255, 255, 255);
+        margin-right: 70px;
+        h3{
+            font-size: larger;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+        ul{
+            padding-left: 0px;
+        }
+    }
+    .redessociales{
+        display: none;
+    }
+}

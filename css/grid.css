@@ -1,0 +1,243 @@
+/*los mixins se encuentran en la seccion variable y los includes en la carpeta contenedor*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background: #21414d; }
+  body .logowhatsapp {
+    position: fixed;
+    width: 64px;
+    height: 64px;
+    line-height: 64px;
+    bottom: 25px;
+    right: 25px;
+    transition: transform .2s; }
+  body .logowhatsapp:hover {
+    transform: scale(1.1); }
+  body .logo {
+    width: 150px;
+    max-width: 100%;
+    height: 160px;
+    max-height: 100%; }
+  body h1 {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bolder; }
+  body h2 {
+    font-size: 20px;
+    font-weight: bolder; }
+
+.contenedor {
+  font-family: 'Noto Sans JP', sans-serif;
+  width: 100%;
+  max-width: 1500px;
+  margin: 20px auto;
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: "header header header" "contenido contenido sidebar" "widget-1 widget-2 sidebar" "footer footer footer";
+  /*formulario de contacto*/
+  /*fin formulario de contacto*/ }
+  .contenedor .header {
+    background-color: #202124;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px 2px black;
+    grid-area: header; }
+  .contenedor .contenido {
+    background-color: #DADBBD;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px 2px black;
+    grid-area: contenido;
+    text-align: center;
+    transition: transform .2s; }
+    .contenedor .contenido:hover {
+      transform: scale(1.03); }
+  .contenedor .cajacontacto {
+    background-color: #DADBBD;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px 2px black;
+    grid-area: contenido;
+    width: 1500px;
+    margin-right: -20px; }
+  .contenedor .sidebar {
+    background-color: #DADBBD;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px 2px black;
+    grid-column: 3 / 4;
+    min-height: 100px;
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: transform .2s; }
+    .contenedor .sidebar:hover {
+      transform: scale(1.03); }
+    .contenedor .sidebar img {
+      width: 100%;
+      height: 100%; }
+  .contenedor .widget-1 {
+    grid-area: widget-1;
+    background-color: #DADBBD;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px 2px black;
+    min-height: 100px;
+    transition: transform .2s; }
+    .contenedor .widget-1:hover {
+      transform: scale(1.05); }
+  .contenedor .widget-2 {
+    grid-area: widget-2;
+    background-color: #DADBBD;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px 2px black;
+    min-height: 100px;
+    transition: transform .2s; }
+    .contenedor .widget-2:hover {
+      transform: scale(1.05); }
+  .contenedor .footer {
+    background-color: #202124;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px 2px black;
+    grid-area: footer; }
+  .contenedor .contenidodiv {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden; }
+  .contenedor .iframeresponsivo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+.header {
+  flex-direction: column; }
+  .header .logo {
+    margin-top: -50px; }
+  .header .redessociales ul {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 75px; }
+    .header .redessociales ul li {
+      margin-right: 40px;
+      list-style-type: none;
+      margin-bottom: -20px;
+      transition: transform .3s; }
+      .header .redessociales ul li:hover {
+        transform: scale(1.2); }
+      .header .redessociales ul li img {
+        margin-left: 3px;
+        margin-top: 4px;
+        width: 32px; }
+  .header .navbar ul li {
+    color: black;
+    margin: 0 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.4s;
+    padding: 4px 8px;
+    border-radius: 90px;
+    list-style-type: none; }
+    .header .navbar ul li a {
+      text-decoration: none;
+      display: inline-block;
+      position: relative;
+      color: white; }
+      .header .navbar ul li a:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #ffffff;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out; }
+      .header .navbar ul li a:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left; }
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .footer ul li {
+    list-style-type: none; }
+  .footer a {
+    color: white;
+    text-decoration: none; }
+  .footer .titulosfooter {
+    font-weight: lighter;
+    color: white;
+    text-decoration: none;
+    text-decoration-color: white;
+    margin-right: 70px; }
+    .footer .titulosfooter h3 {
+      font-size: larger;
+      font-weight: 600;
+      text-decoration: underline; }
+    .footer .titulosfooter ul {
+      padding-left: 0px; }
+  .footer .redessociales {
+    display: none; }
+
+@media screen and (max-width: 767px) {
+  body {
+    margin: 20px; }
+  .contenedor {
+    grid-template-areas: "header header header" "contenido contenido contenido" "sidebar sidebar sidebar" "cajacontacto cajacontacto cajacontacto" "widget-1 widget-1 widget-1 " "widget-2 widget-2 widget-2 " "footer footer footer"; }
+    .contenedor .header .redessociales ul {
+      display: none; }
+    .contenedor .header nav ul a:hover:after {
+      transform: scalex(0); }
+    .contenedor .header .logo {
+      position: absolute;
+      right: 40px;
+      top: 40px; }
+    .contenedor .contenido:hover {
+      transform: scale(1); }
+    .contenedor .sidebar img {
+      display: none; }
+    .contenedor .sidebar:hover {
+      transform: scale(1); }
+    .contenedor .widget-1:hover {
+      transform: scale(1); }
+    .contenedor .widget-2:hover {
+      transform: scale(1); }
+    .contenedor .cajacontacto {
+      width: auto;
+      margin: auto;
+      margin-bottom: -80px; }
+    .contenedor .footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .contenedor .footer .logo {
+        display: none; }
+      .contenedor .footer .redessociales {
+        display: contents; }
+        .contenedor .footer .redessociales ul {
+          display: flex;
+          justify-content: center;
+          margin-left: -40px; }
+          .contenedor .footer .redessociales ul li {
+            padding: 20px;
+            padding-top: 10px; }
+        .contenedor .footer .redessociales h3 {
+          color: white; }
+        .contenedor .footer .redessociales img {
+          width: 32px; }
+      .contenedor .footer .titulosfooter {
+        margin: auto;
+        margin-bottom: 20px; } }

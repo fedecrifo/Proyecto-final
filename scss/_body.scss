@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background:#21414d;
+    .logowhatsapp{
+        position:fixed;
+        width: 64px;
+        height:64px;
+        line-height: 64px;
+        bottom:25px;
+        right:25px;
+        transition: transform .2s;
+    }
+    
+    .logowhatsapp:hover{
+        transform: scale(1.1);
+    }
+    
+    .logo{
+        width: 150px;
+        max-width: 100%;
+        height: 160px;
+        max-height: 100%;
+    }
+    
+    h1{
+        font-size: 30px;
+        text-align: center;
+        font-weight: bolder;
+    }
+    h2{
+        font-size: 20px;
+        font-weight: bolder;
+    }
+    
+}
+

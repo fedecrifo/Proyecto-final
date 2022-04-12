@@ -1,0 +1,85 @@
+@media screen and (max-width: 767px)/*cambio medido con exactitud en mozilla para compatibilidad con bootstrap*/{
+    body{
+        margin: 20px;
+    }
+    .contenedor{
+        grid-template-areas: "header header header"
+                            "contenido contenido contenido"
+                            "sidebar sidebar sidebar"
+                            "cajacontacto cajacontacto cajacontacto"
+                            "widget-1 widget-1 widget-1 "
+                            "widget-2 widget-2 widget-2 "
+                            "footer footer footer";
+    
+        
+        .header{
+            .redessociales ul{
+                display: none;
+            }
+            nav ul{
+                a:hover:after{
+                    transform: scalex(0);
+                }
+            }
+            .logo{
+                position: absolute;
+                right: 40px;
+                top: 40px;
+            }
+        }
+        .contenido:hover{
+                transform: scale(1);
+        }
+        .sidebar img{
+            display: none;
+        }
+        .sidebar:hover{
+            transform: scale(1);
+        }
+        .widget-1:hover{
+            transform: scale(1);
+        }
+        .widget-2:hover{
+            transform: scale(1);
+        }
+
+        .cajacontacto{
+            width: auto;
+            margin: auto;
+            margin-bottom: -80px;
+        }
+        .footer{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .logo{
+                display: none;
+            }
+            .redessociales{
+                display: contents;
+                ul{
+                    display: flex;
+                    justify-content: center;
+                    margin-left: -40px;
+                    li{
+                        padding: 20px;
+                        padding-top: 10px;
+                    }
+                }
+                h3{
+                    color: white;
+                }
+                
+                img{
+                    width: 32px;
+                }
+            }
+            .titulosfooter{
+            margin: auto;
+            margin-bottom: 20px;     
+            }
+            
+        }
+        
+    }
+}

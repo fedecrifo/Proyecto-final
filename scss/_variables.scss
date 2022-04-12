@@ -1,0 +1,12 @@
+$bggrid1:#202124;
+$bggrid2:#DADBBD;
+
+@mixin grids($bggrid) {
+    background-color: $bggrid;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px 2px rgb(0, 0, 0);
+    
+}
+
+/*los mixins se encuentran en la seccion variable y los includes en la carpeta contenedor*/

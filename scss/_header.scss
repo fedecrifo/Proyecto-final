@@ -1,0 +1,57 @@
+.header{
+    flex-direction: column;
+    .logo{
+        margin-top: -50px;
+    }
+    .redessociales ul{
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 75px;
+        li{ 
+            margin-right: 40px;
+            list-style-type: none;
+            margin-bottom: -20px;
+            transition: transform .3s;
+            &:hover{
+                transform: scale(1.2);
+            }
+            img{
+                margin-left: 3px;
+                margin-top: 4px;
+                width: 32px;
+            }
+        }
+    }
+    .navbar ul li{
+            color: rgb(0, 0, 0);
+            margin: 0 16px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.4s;
+            padding: 4px 8px;
+            border-radius: 90px;
+            list-style-type: none;
+            a{
+                text-decoration: none;
+                display: inline-block;
+                position: relative;
+                color: white;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    transform: scaleX(0);
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: #ffffff;
+                    transform-origin: bottom right;
+                    transition: transform 0.25s ease-out;
+                }
+                &:hover:after {
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
+                }
+            }    
+    }
+}
