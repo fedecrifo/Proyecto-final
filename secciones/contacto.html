@@ -68,31 +68,31 @@
                 <form class="row g-3">
                     <div class="col-md-6">
                       <label for="inputname" class="form-label">Nombre</label>
-                      <input type="name" class="form-control datoInput" id="inputname" required>
+                      <input type="name" class="form-control datoInput" id="inputName" >
                     </div>
                     <div class="col-md-6">
                       <label for="inputlastname" class="form-label">Apellido</label>
-                      <input type="lastname" class="form-control datoInput" id="inputlastname" required>
+                      <input type="lastname" class="form-control datoInput" id="inputLastName" >
                     </div>
                     <div class="col-12">
                       <label for="inputpassword" class="form-label">Contraseña</label>
-                      <input type="password" class="form-control datoInput" id="inputpassword" required>
+                      <input type="password" class="form-control datoInput" id="inputPassword" >
                     </div>
                     <div class="col-12">
                       <label for="inputpassword" class="form-label">Confirmar Contraseña</label>
-                      <input type="password" class="form-control datoInput" id="confirmpassword" required>
+                      <input type="password" class="form-control datoInput" id="confirmpassword" >
                     </div>
                     <div class="col-12">
                         <label for="inputemail" class="form-label">Email</label>
-                        <input type="email" class="form-control datoInput" id="inputemail" required>
+                        <input type="email" class="form-control datoInput" id="inputEmail" >
                       </div>
                       <div class="col-12">
                         <label for="inputemail" class="form-label">Confirmar email</label>
-                        <input type="email" class="form-control datoInput" id="confirmemail" required>
+                        <input type="email" class="form-control datoInput" id="confirmemail" >
                       </div>
                     <div class="col-12">
                       <label for="inputphonenumber" class="form-label">Telefono</label>
-                      <input type="phonenumber" class="form-control datoInput" id="inputphonenumber">
+                      <input type="phonenumber" class="form-control datoInput" id="inputPhoneNumber">
                     </div>  
                     <div class="col-12">
                         <label for="inputcomments">Comentarios</label>
@@ -107,9 +107,12 @@
                       </div>
                     </div>
                     <div class="col-12">
-                      <button type="submit" class="btn btn-primary" onclick="viewsArrayInput()">Sign in</button>
+                      <button type="submit" onclick="viewsArrayInput(); validar()" class="btn btn-primary" >Sign in</button>
                     </div>
                   </form>
+                  <div id="error"></div>
+                  
+                  
 
                 <!--Whatsapp-->
             
