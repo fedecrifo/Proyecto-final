@@ -9,5 +9,9 @@
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "sweetalert": "^2.1.2",
+    "sweetalert2": "^11.4.18"
+  }
 }

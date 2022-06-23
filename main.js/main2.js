@@ -22,31 +22,31 @@ function validar(){
 
 
     if (nombre === "" || apellidos === "" || correo === "" || pass === "" || telefono === ""){
-        alert("Todos los campos son obligatorios");
+        swal("Todos los campos deben ser completados", "", "error");
         return false;
     }
     else if (nombre.length>30){
-        alert("El nombre es muy largo");
+        swal("El nombre es muy largo", "", "error");
         return false;
     }
     else if (apellidos.length>80){
-        alert("Los apellidos son muy largos");
+        swal("Los apellidos son muy largos", "", "error");
         return false;
     }
     else if (correo.length>100){
-        alert("El correo es muy largo");
+        swal("El correo es muy largo", "", "error");
         return false;
     }
     else if (!expresion.test(correo)){
-        alert("El correo no es válido");
+        swal("El correo no es válido", "", "error");
         return false;
     }
     else if (telefono.length>15){
-        alert("El telefono es muy largo");
+        swal("El telefono es muy largo", "", "error");
         return false;
     }
     else if (isNaN(telefono)){
-        alert("Ha ingresado un  número de teléfono no válido");
+        swal("Ha ingresado un  número de teléfono no válido", "", "error");
         return false;
     }
 
