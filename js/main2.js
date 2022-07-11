@@ -1,3 +1,5 @@
+//Almacenamiento en el localstorage
+
 function viewsArrayInput(){
     let arrayInput=new Array();
     let inputsValues=document.getElementsByClassName('datoInput'),
@@ -11,17 +13,18 @@ function viewsArrayInput(){
     console.log(JSON.parse(localStorage.getItem("inputValues")));
 }
 
-/*function validar(){
-    //validar nombre
+// validacion de formulario y utilizando libreria sweetAlert2
+
+function validar(){
+    
     const nombre = document.getElementById("inputName").value;
     const apellidos = document.getElementById("inputLastName").value;
     const correo = document.getElementById("inputEmail").value;
-    const pass = document.getElementById("inputPassword").value;
     const telefono = document.getElementById("inputPhoneNumber").value;
     const expresion = /\w+@\w+\.+[a-z]/;
 
 
-    if (nombre === "" || apellidos === "" || correo === "" || pass === "" || telefono === ""){
+    if (nombre === "" || apellidos === "" || correo === "" || telefono === ""){
         swal("Todos los campos deben ser completados", "", "error");
         return false;
     }
@@ -51,16 +54,16 @@ function viewsArrayInput(){
     }
 
 }
-*/
 
+//usando api para guardar datos de formulario y enviarlo tambien a mi email 
 
 const form = document.getElementById("my-form");
     
-async function handleSubmit(event) {
-  event.preventDefault();
+async function handleSubmit(e) {
+  e.preventDefault();
   const status = document.getElementById("my-form-status");
-  const data = new FormData(event.target);
-  fetch(event.target.action, {
+  const data = new FormData(e.target);
+  fetch(e.target.action, {
     method: form.method,
     body: data,
     headers: {
